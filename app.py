@@ -16,6 +16,9 @@ st.markdown("""
 <style>
 .stApp { background:#eef2f7; }
 section[data-testid="stSidebar"] { background:#e2e8f0; }
+.stApp, .stApp p, .stApp span, .stApp div, .stApp label,
+.stApp .stMarkdown, .stApp .stText { color:#111 !important; }
+.stApp h1, .stApp h2, .stApp h3 { color:#0f172a !important; }
 
 .msg-supervisor {
     background:#f5f3ff; border-left:3px solid #7c3aed;

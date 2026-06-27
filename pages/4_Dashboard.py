@@ -17,6 +17,9 @@ st.markdown("""
 <style>
 .stApp { background:#f8fafc; }
 section[data-testid="stSidebar"] { background:#f1f5f9; }
+.stApp, .stApp p, .stApp span, .stApp div, .stApp label,
+.stApp .stMarkdown, .stApp .stText { color:#111 !important; }
+.stApp h1, .stApp h2, .stApp h3 { color:#0f172a !important; }
 .badge-ai    { background:#eff6ff; color:#2563eb; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:700; }
 .badge-human { background:#f0fdf4; color:#16a34a; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:700; }
 .metric-box  { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:14px; text-align:center; }

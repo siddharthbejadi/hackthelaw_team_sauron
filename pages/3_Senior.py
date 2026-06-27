@@ -11,6 +11,9 @@ st.markdown("""
 <style>
 .stApp { background:#f8fafc; }
 section[data-testid="stSidebar"] { background:#f1f5f9; }
+.stApp, .stApp p, .stApp span, .stApp div, .stApp label,
+.stApp .stMarkdown, .stApp .stText { color:#111 !important; }
+.stApp h1, .stApp h2, .stApp h3 { color:#0f172a !important; }
 .card  { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px; margin-bottom:10px; }
 .flag-high { background:#fef2f2; border:1px solid #fca5a5; border-radius:6px; padding:6px 12px; margin:4px 0; font-size:0.82rem; color:#dc2626; }
 .flag-med  { background:#fffbeb; border:1px solid #fcd34d; border-radius:6px; padding:6px 12px; margin:4px 0; font-size:0.82rem; color:#d97706; }
