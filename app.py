@@ -341,47 +341,47 @@ else:
     st.markdown("""
 <div style="max-width:960px;margin:48px auto;text-align:center;padding:0 16px;">
   <div style="font-size:4rem;margin-bottom:20px;">⚖️</div>
-  <div style="color:#1e293b;font-size:1.25rem;font-weight:700;margin-bottom:10px;">
+  <div style="color:#000;font-size:1.25rem;font-weight:700;margin-bottom:10px;">
     AI-Powered Legal Supervision
   </div>
-  <div style="color:#475569;font-size:0.95rem;line-height:1.8;margin-bottom:40px;max-width:580px;margin-left:auto;margin-right:auto;">
+  <div style="color:#1e293b;font-size:0.95rem;line-height:1.8;margin-bottom:40px;max-width:580px;margin-left:auto;margin-right:auto;">
     Type a legal clause, matter description, or question above.<br>
     Watch <b style="color:#2563eb;">AI agents</b> stream their analysis live —
     each one thinking, writing, and handing results to the next.
   </div>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:0 auto 40px;">
-    <div style="background:#fff;border:2px solid #93c5fd;border-radius:12px;padding:24px 16px;font-size:0.85rem;color:#334155;box-shadow:0 4px 12px rgba(37,99,235,0.08);">
+    <div style="background:#fff;border-left:4px solid #2563eb;border-radius:8px;padding:24px 16px;font-size:0.85rem;color:#000;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
       <div style="font-size:1.8rem;margin-bottom:10px;">🔍</div>
       <div style="color:#2563eb;font-weight:700;font-size:0.9rem;margin-bottom:8px;">Research</div>
       Finds relevant UK statutes and case law
     </div>
-    <div style="background:#fff;border:2px solid #fcd34d;border-radius:12px;padding:24px 16px;font-size:0.85rem;color:#334155;box-shadow:0 4px 12px rgba(217,119,6,0.08);">
+    <div style="background:#fff;border-left:4px solid #d97706;border-radius:8px;padding:24px 16px;font-size:0.85rem;color:#000;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
       <div style="font-size:1.8rem;margin-bottom:10px;">✍️</div>
       <div style="color:#d97706;font-weight:700;font-size:0.9rem;margin-bottom:8px;">Drafting</div>
       Drafts clauses and legal documents
     </div>
-    <div style="background:#fff;border:2px solid #fca5a5;border-radius:12px;padding:24px 16px;font-size:0.85rem;color:#334155;box-shadow:0 4px 12px rgba(220,38,38,0.08);">
+    <div style="background:#fff;border-left:4px solid #dc2626;border-radius:8px;padding:24px 16px;font-size:0.85rem;color:#000;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
       <div style="font-size:1.8rem;margin-bottom:10px;">🔎</div>
       <div style="color:#dc2626;font-weight:700;font-size:0.9rem;margin-bottom:8px;">Review + Risk</div>
       Checks compliance and flags HIGH risks
     </div>
-    <div style="background:#fff;border:2px solid #c4b5fd;border-radius:12px;padding:24px 16px;font-size:0.85rem;color:#334155;box-shadow:0 4px 12px rgba(124,58,237,0.08);">
+    <div style="background:#fff;border-left:4px solid #7c3aed;border-radius:8px;padding:24px 16px;font-size:0.85rem;color:#000;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
       <div style="font-size:1.8rem;margin-bottom:10px;">🧠</div>
       <div style="color:#7c3aed;font-weight:700;font-size:0.9rem;margin-bottom:8px;">Supervisor</div>
       Aggregates results and decides escalation
     </div>
   </div>
   <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:32px;">
-    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#475569;">
+    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#000;">
       <b style="color:#0f172a;">Partner</b> — Submit matters
     </div>
-    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#475569;">
+    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#000;">
       <b style="color:#0f172a;">Junior</b> — Write with AI assistance
     </div>
-    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#475569;">
+    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#000;">
       <b style="color:#0f172a;">Senior</b> — Approve or escalate
     </div>
-    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#475569;">
+    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#000;">
       <b style="color:#0f172a;">Dashboard</b> — Full audit trail
     </div>
   </div>
