@@ -59,9 +59,9 @@ section[data-testid="stSidebar"] { background:#e2e8f0; }
 
 # ── Header ─────────────────────────────────────────────────────────────────────
 st.markdown("""
-<div style="padding:16px 0 8px;">
-  <div style="font-size:2rem;font-weight:800;color:#0f172a;">⚖️ Legal AI Supervisor</div>
-  <div style="color:#64748b;font-size:0.85rem;margin-top:4px;">
+<div style="padding:20px 0 10px;">
+  <div style="font-size:2.4rem;font-weight:800;color:#0f172a;letter-spacing:-0.5px;">⚖️ Legal AI Supervisor</div>
+  <div style="color:#64748b;font-size:0.9rem;margin-top:6px;">
     Watch AI agents communicate in real time — research, draft, review, and risk analysis running live.
   </div>
 </div>
@@ -339,33 +339,54 @@ if task:
 else:
     # ── Landing state ─────────────────────────────────────────────────────
     st.markdown("""
-<div style="max-width:680px;margin:40px auto;text-align:center;">
-  <div style="font-size:3rem;margin-bottom:16px;">⚖️</div>
-  <div style="color:#334155;font-size:1rem;line-height:1.7;margin-bottom:32px;">
+<div style="max-width:960px;margin:48px auto;text-align:center;padding:0 16px;">
+  <div style="font-size:4rem;margin-bottom:20px;">⚖️</div>
+  <div style="color:#1e293b;font-size:1.25rem;font-weight:700;margin-bottom:10px;">
+    AI-Powered Legal Supervision
+  </div>
+  <div style="color:#475569;font-size:0.95rem;line-height:1.8;margin-bottom:40px;max-width:580px;margin-left:auto;margin-right:auto;">
     Type a legal clause, matter description, or question above.<br>
     Watch <b style="color:#2563eb;">AI agents</b> stream their analysis live —
     each one thinking, writing, and handing results to the next.
   </div>
-  <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
-    <div style="background:#fff;border:2px solid #93c5fd;border-radius:10px;padding:14px 18px;font-size:0.82rem;color:#334155;max-width:190px;box-shadow:0 2px 8px rgba(37,99,235,0.1);">
-      <div style="color:#2563eb;font-weight:700;margin-bottom:6px;">🔍 Research</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:0 auto 40px;">
+    <div style="background:#fff;border:2px solid #93c5fd;border-radius:12px;padding:24px 16px;font-size:0.85rem;color:#334155;box-shadow:0 4px 12px rgba(37,99,235,0.08);">
+      <div style="font-size:1.8rem;margin-bottom:10px;">🔍</div>
+      <div style="color:#2563eb;font-weight:700;font-size:0.9rem;margin-bottom:8px;">Research</div>
       Finds relevant UK statutes and case law
     </div>
-    <div style="background:#fff;border:2px solid #fcd34d;border-radius:10px;padding:14px 18px;font-size:0.82rem;color:#334155;max-width:190px;box-shadow:0 2px 8px rgba(217,119,6,0.1);">
-      <div style="color:#d97706;font-weight:700;margin-bottom:6px;">🔎 Review</div>
-      Checks drafts for errors and compliance gaps
+    <div style="background:#fff;border:2px solid #fcd34d;border-radius:12px;padding:24px 16px;font-size:0.85rem;color:#334155;box-shadow:0 4px 12px rgba(217,119,6,0.08);">
+      <div style="font-size:1.8rem;margin-bottom:10px;">✍️</div>
+      <div style="color:#d97706;font-weight:700;font-size:0.9rem;margin-bottom:8px;">Drafting</div>
+      Drafts clauses and legal documents
     </div>
-    <div style="background:#fff;border:2px solid #fca5a5;border-radius:10px;padding:14px 18px;font-size:0.82rem;color:#334155;max-width:190px;box-shadow:0 2px 8px rgba(220,38,38,0.1);">
-      <div style="color:#dc2626;font-weight:700;margin-bottom:6px;">⚠️ Risk</div>
-      Classifies legal risk HIGH / MEDIUM / LOW
+    <div style="background:#fff;border:2px solid #fca5a5;border-radius:12px;padding:24px 16px;font-size:0.85rem;color:#334155;box-shadow:0 4px 12px rgba(220,38,38,0.08);">
+      <div style="font-size:1.8rem;margin-bottom:10px;">🔎</div>
+      <div style="color:#dc2626;font-weight:700;font-size:0.9rem;margin-bottom:8px;">Review + Risk</div>
+      Checks compliance and flags HIGH risks
     </div>
-    <div style="background:#fff;border:2px solid #c4b5fd;border-radius:10px;padding:14px 18px;font-size:0.82rem;color:#334155;max-width:190px;box-shadow:0 2px 8px rgba(124,58,237,0.1);">
-      <div style="color:#7c3aed;font-weight:700;margin-bottom:6px;">🧠 Supervisor</div>
+    <div style="background:#fff;border:2px solid #c4b5fd;border-radius:12px;padding:24px 16px;font-size:0.85rem;color:#334155;box-shadow:0 4px 12px rgba(124,58,237,0.08);">
+      <div style="font-size:1.8rem;margin-bottom:10px;">🧠</div>
+      <div style="color:#7c3aed;font-weight:700;font-size:0.9rem;margin-bottom:8px;">Supervisor</div>
       Aggregates results and decides escalation
     </div>
   </div>
-  <div style="margin-top:32px;font-size:0.75rem;color:#64748b;">
-    For the full firm workflow: Partner → Junior → Senior → Dashboard
+  <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:32px;">
+    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#475569;">
+      <b style="color:#0f172a;">Partner</b> — Submit matters
+    </div>
+    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#475569;">
+      <b style="color:#0f172a;">Junior</b> — Write with AI assistance
+    </div>
+    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#475569;">
+      <b style="color:#0f172a;">Senior</b> — Approve or escalate
+    </div>
+    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 20px;font-size:0.8rem;color:#475569;">
+      <b style="color:#0f172a;">Dashboard</b> — Full audit trail
+    </div>
+  </div>
+  <div style="font-size:0.75rem;color:#94a3b8;">
+    Powered by NVIDIA Nemotron-Ultra 550B · Clifford Chance Hackathon
   </div>
 </div>
 """, unsafe_allow_html=True)
