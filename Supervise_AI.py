@@ -10,25 +10,12 @@ import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from agents import _get_client, MODEL, AGENT_PROMPTS, _extract_json, log_event
 
-st.set_page_config(page_title="Legal AI Supervisor", layout="wide", page_icon="⚖️")
+st.set_page_config(page_title="Supervise AI", layout="wide", page_icon="⚖️")
 
 st.markdown("""
 <style>
 .stApp { background:#eef2f7; }
 section[data-testid="stSidebar"] { background:#e2e8f0; }
-/* Force black text everywhere */
-* { color:#111 !important; }
-/* Sidebar nav links */
-[data-testid="stSidebarNav"] a,
-[data-testid="stSidebarNav"] a span,
-[data-testid="stSidebarNav"] li,
-[data-testid="stSidebarNav"] span { color:#0f172a !important; }
-/* Keep coloured accents */
-a { color:#2563eb !important; }
-/* Keep white text on dark buttons */
-.stButton > button[kind="primary"] { color:#fff !important; }
-/* General text */
-p, span, div, label, h1, h2, h3, h4 { color:#111 !important; }
 
 .msg-supervisor {
     background:#f5f3ff; border-left:3px solid #7c3aed;
@@ -124,25 +111,30 @@ def stream_agent_live(agent_name: str, task: str, context: str = ""):
     if context:
         user_content += f"\n\nCONTEXT:\n{context}"
 
-    stream = _get_client().chat.completions.create(
-        model=MODEL,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user",   "content": user_content},
-        ],
-        temperature=0.6,
-        top_p=0.95,
-        max_tokens=3000,
-        extra_body={
-            "chat_template_kwargs": {"enable_thinking": True},
-            "reasoning_budget": 2048,
-        },
-        stream=True,
-    )
+    try:
+        stream = _get_client().chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user",   "content": user_content},
+            ],
+            temperature=0.6,
+            top_p=0.95,
+            max_tokens=3000,
+            extra_body={
+                "chat_template_kwargs": {"enable_thinking": True},
+                "reasoning_budget": 2048,
+            },
+            stream=True,
+        )
+    except Exception as e:
+        yield f"[API ERROR: {str(e)[:120]}]"
+        return
 
     output_text    = ""
     reasoning_text = ""
-    for chunk in stream:
+    try:
+      for chunk in stream:
         if not chunk.choices:
             continue
         delta = chunk.choices[0].delta
@@ -152,6 +144,8 @@ def stream_agent_live(agent_name: str, task: str, context: str = ""):
         if delta.content:
             output_text += delta.content
             yield delta.content   # yield each token for live display
+    except Exception as e:
+        yield f"[STREAM ERROR: {str(e)[:120]}]"
 
     log_event(agent_name, "live_stream", {"task_preview": task[:80]})
     return output_text

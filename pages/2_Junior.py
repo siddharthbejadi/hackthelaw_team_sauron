@@ -21,14 +21,6 @@ st.markdown("""
 <style>
 .stApp { background:#f8fafc; }
 section[data-testid="stSidebar"] { background:#f1f5f9; }
-* { color:#111 !important; }
-[data-testid="stSidebarNav"] a,
-[data-testid="stSidebarNav"] a span,
-[data-testid="stSidebarNav"] li,
-[data-testid="stSidebarNav"] span { color:#0f172a !important; }
-a { color:#2563eb !important; }
-.stButton > button[kind="primary"] { color:#fff !important; }
-p, span, div, label, h1, h2, h3, h4 { color:#111 !important; }
 .card        { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px; margin-bottom:8px; }
 .instr-card  { background:#f8fafc; border-left:3px solid #2563eb; border-radius:6px; padding:14px; color:#374151; font-size:0.88rem; line-height:1.6; }
 .flag-high   { background:#fef2f2; border:1px solid #fca5a5; border-radius:6px; padding:5px 10px; margin:3px 0; font-size:0.8rem; color:#dc2626; }
