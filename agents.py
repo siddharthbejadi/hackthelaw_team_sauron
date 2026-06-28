@@ -24,10 +24,19 @@ BASE_URL = os.environ.get("BASE_URL", "https://integrate.api.nvidia.com/v1")
 MODEL    = os.environ.get("MODEL_NAME", "nvidia/nemotron-3-ultra-550b-a55b")
 
 # Load all available API keys — supports up to 3 keys
+# Load all available API keys — supports up to 10 keys
 _keys = [k for k in [
     os.environ.get("NVIDIA_API_KEY") or os.environ.get("OPENAI_API_KEY"),
+    os.environ.get("NVIDIA_API_KEY_1"),
     os.environ.get("NVIDIA_API_KEY_2"),
     os.environ.get("NVIDIA_API_KEY_3"),
+    os.environ.get("NVIDIA_API_KEY_4"),
+    os.environ.get("NVIDIA_API_KEY_5"),
+    os.environ.get("NVIDIA_API_KEY_6"),
+    os.environ.get("NVIDIA_API_KEY_7"),
+    os.environ.get("NVIDIA_API_KEY_8"),
+    os.environ.get("NVIDIA_API_KEY_9"),
+    os.environ.get("NVIDIA_API_KEY_10"),
 ] if k]
 
 if not _keys:
